@@ -53,10 +53,10 @@ has_maven_wrapper() {
   local home=${1}
   if [ -f $home/mvnw ] &&
       [ -f $home/.mvn/wrapper/maven-wrapper.jar ] &&
-      [ -f $home/.mvn/wrapper/maven-wrapper.properties ] &&
-      [ -z "$(detect_maven_version $home)" ]; then
+      [ -f $home/.mvn/wrapper/maven-wrapper.properties ]; then
     return 0;
   else
+    echo "No maven wrapper found";
     return 1;
   fi
 }
